@@ -20,7 +20,7 @@ jobs:
           npm run build
       - uses: actions/upload-artifact@master
         with:
-          name: webpack artifacts
+          name: webpack-artifacts
           path: public/
 
   test:
@@ -37,7 +37,7 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - uses: actions/download-artifact@master
         with: 
-          name: webpack artifacts
+          name: webpack-artifacts
           path: public
       - name: npm install, and test
         run: |
